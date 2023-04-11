@@ -1,4 +1,4 @@
-![yamdb workflow](https://github.com/github/docs/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb workflow](https://github.com/logm3/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ### Описание  
 
 Данный проект предоставляет доступ к сервису YaMDb посредством API.
