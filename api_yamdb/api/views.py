@@ -6,29 +6,19 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
+from users.models import User
 
 from .filtersets import TitleFilter
-from reviews.models import Genre, Category, Title, Review
-from users.models import User
-from .utils import send_mail_to_user
-from .serializers import (
-    GenreSerializer,
-    CategorySerializer,
-    ReadTitleSerializer,
-    TitleCreateSerializer,
-    UserSignupSerializer,
-    UserPatchSerializer,
-    UserTokenSerializer,
-    UserSerializer,
-    ReviewSerializer,
-    CommentSerializer
-)
-from .permissions import (
-    IsAuthorOrModeratorOrAdminOrReadOnly,
-    IsAdminOrReadOnly,
-    IsAdmin
-)
 from .mixins import ViewSetMixin
+from .permissions import (IsAdmin, IsAdminOrReadOnly,
+                          IsAuthorOrModeratorOrAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReadTitleSerializer,
+                          ReviewSerializer, TitleCreateSerializer,
+                          UserPatchSerializer, UserSerializer,
+                          UserSignupSerializer, UserTokenSerializer)
+from .utils import send_mail_to_user
 
 
 class GenreViewSet(ViewSetMixin):
