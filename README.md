@@ -1,4 +1,3 @@
-![yamdb workflow](https://github.com/logm3/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ### Описание  
 
 Данный проект предоставляет доступ к сервису RateIt посредством API.
